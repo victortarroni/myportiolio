@@ -1,0 +1,136 @@
+#my-contact{
+  width: auto;
+  height: 577px;
+  background-color: var(--primary-color);
+  display: flex;
+}
+
+
+#contact-1{
+  width: 50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 150px;
+}
+
+
+#contact-text{
+  width: 410px;
+  height: 135px;
+}
+@media(max-width: 430px){
+  
+}
+
+.contact-bold{
+  font-weight: bold;
+}
+
+#contact-logo,  #contact-logo-dark {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+
+#contact-logo-dark{
+  display: none !important;
+}
+
+#github{
+  width: 104px;
+  height: 104px;
+  
+}
+
+
+#linkedin{
+  width: 94px;
+  height: 93px;
+  
+}
+
+
+#googlemaps{
+  width: 58px;
+  height: 83px;
+  
+}
+
+
+footer {
+  width: auto;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Version */
+
+
+@media(max-width: 768px){
+
+  #my-contact{
+    width: 100%;
+    height: 577px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column; 
+  }
+
+  #contact-1{
+    width: 100%;
+    height:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  #contact-text{
+    width: 323px;
+    height: 108px;
+  }
+
+  #contact-logo,  #contact-logo-dark {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #github{
+    width: 49.6px;
+    height: 49.6px;
+    margin-left: 84px;
+    margin-right: 0px;
+  } 
+
+  #linkedin{
+    width: 44.83px;
+    height: 44.35px;
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+
+  #googlemaps{
+    width: 27.66px;
+    height: 39.58px;
+    margin-right: 83.79px;
+  }
+
+}
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/header.style.css" />
+    <link rel="stylesheet" href="/about-me.style.css" />
+    <link rel="stylesheet" href="/my-skills.style.css" />
+    <link rel="stylesheet" href="/projects.style.css" />
+    <link rel="stylesheet" href="/contacts.style.css" />
+    <link rel="stylesheet" href="/carousel.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // This script is positioned at the root of the webpage to prevent any noticeable page flickering or flashing. By placing this script here, it ensures that this code is processed and rendered by the browser prior to the entire HTML page being fully displayed.  //
+
+      const theme = localStorage.getItem("theme");
+      if (theme) {
+        const action = theme === "dark" ? "add" : "remove";
+        document.body.classList[action]("dark");
+      } else if (
+        matchMedia &&
+        matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.body.classList.add("dark-theme");
+      }
+    </script>
+
+    <!---------- header ---------->
+
+    <div id="header">
+      <div id="menu" class="hidden-menu">
+        <ul class="menu-holder">
+          <li id="btn-close" class="hidden-desktop list-mobile">&times;</li>
+          <li><a href="#about-me" class="link">About Me</a></li>
+          <li><a href="#mySkills" class="link">My Skills</a></li>
+          <li><a href="#my-projects" class="link">Projects</a></li>
+          <li><a href="#my-contact" class="link">Contacts</a></li>
+          <li><i class="fa-solid fa-sun" id="icon"></i></li>
+
+          <li class="hidden-desktop list-mobile"></li>
+        </ul>
+      </div>
+      <div>
+        <svg
+          width="25"
+          height="17"
+          viewBox="0 0 25 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          id="menu-icon"
+          class="hidden-desktop"
+        >
+          <path
+            d="M1.38889 17C0.995375 17 0.665282 16.864 0.398616 16.592C0.131949 16.32 -0.00092112 15.9838 4.80585e-06 15.5833C4.80585e-06 15.1819 0.133338 14.8452 0.400005 14.5732C0.666671 14.3012 0.996301 14.1657 1.38889 14.1667H23.6111C24.0046 14.1667 24.3347 14.3027 24.6014 14.5747C24.868 14.8467 25.0009 15.1829 25 15.5833C25 15.9847 24.8667 16.3214 24.6 16.5934C24.3333 16.8654 24.0037 17.0009 23.6111 17H1.38889ZM1.38889 9.91667C0.995375 9.91667 0.665282 9.78067 0.398616 9.50867C0.131949 9.23667 -0.00092112 8.90044 4.80585e-06 8.5C4.80585e-06 8.09861 0.133338 7.76192 0.400005 7.48992C0.666671 7.21792 0.996301 7.08239 1.38889 7.08333H23.6111C24.0046 7.08333 24.3347 7.21933 24.6014 7.49133C24.868 7.76333 25.0009 8.09956 25 8.5C25 8.90139 24.8667 9.23808 24.6 9.51008C24.3333 9.78208 24.0037 9.91761 23.6111 9.91667H1.38889ZM1.38889 2.83334C0.995375 2.83334 0.665282 2.69734 0.398616 2.42534C0.131949 2.15334 -0.00092112 1.81712 4.80585e-06 1.41667C4.80585e-06 1.01528 0.133338 0.678588 0.400005 0.406588C0.666671 0.134588 0.996301 -0.000939542 1.38889 4.90195e-06H23.6111C24.0046 4.90195e-06 24.3347 0.136005 24.6014 0.408005C24.868 0.680005 25.0009 1.01623 25 1.41667C25 1.81806 24.8667 2.15475 24.6 2.42675C24.3333 2.69875 24.0037 2.83428 23.6111 2.83334H1.38889Z"
+            fill="var(--text-primary)"
+          />
+        </svg>
+      </div>
+
+      <!-- Text Content -->
+
+      <div id="header-content">
+        <h1 id="content-header">
+          Hey, I'm <br /><span id="ownname">Victor Tarroni</span>
+        </h1>
+        <h2 id="sub-header">Web and Software developer</h2>
+        <p class="sub-text">
+          Hey, I'm Victor Tarroni. I am a software engineer based in
+          Macclesfield, UK.
+        </p>
+        <a href="#about-me" id="about-me-btn">About Me</a>
+      </div>
+    </div>
+
+    <!---------- About me ---------->
+    <div id="about-me" class="section">
+      <div id="about-pic-container">
+        <img src="/images/Nova Foto 1.png" alt="" id="about-img" />
+      </div>
+      <div id="about-container">
+        <h2 id="about-me-title">About Me</h2>
+        <p id="about-me-text">
+          Hey, I'm Victor Tarroni.<br />
+          I am a software engineer based in Macclesfield, UK. <br />I've been
+          professionally writing code with a focus in Web and Software
+          development using HTML, CSS, JavaScript, SQL and C#. I'm naturally
+          curious, and I'm always working on improving my skills through
+          freelance work and collaboration with talented people.
+        </p>
+      </div>
+    </div>
+
+    <!---------- My skills ---------->
+
+    <div id="mySkills" class="section">
+      <div id="text-container">
+        <h2 class="sub-title">My Skills</h2>
+        <p class="sub-text">
+          As a Web Developer, I possess skills that include HTML, CSS,
+          JavaScript, SQL and C#, as well as soft skills such as communication
+          and problem-solving.
+        </p>
+      </div>
+      <div id="my-skills-logo">
+        <div>
+          <img
+            src="/images/skill.1.png"
+            alt="html_skill"
+            id="html-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/skill.2.png"
+            alt="css_skill"
+            id="css-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/skill.3.png"
+            alt="js_skill"
+            id="js-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/skill.4.png"
+            alt="c#_skill"
+            id="cs-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/skill.5.png"
+            alt="sql_skill"
+            id="sql-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/skill.6.png"
+            alt="git_skill"
+            id="git-logo"
+            class="skill-logo"
+          />
+        </div>
+      </div>
+
+      <!-- -------- night mode -------------- -->
+      <div id="my-skills-logo-dark">
+        <div>
+          <img
+            src="/images/html.dark.png"
+            alt="html_skill"
+            id="html-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/css.dark.png"
+            alt="css_skill"
+            id="css-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/JS.dark.png"
+            alt="js_skill"
+            id="js-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/c.dark.png"
+            alt="c#_skill"
+            id="cs-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/SQL.dark.png"
+            alt="sql_skill"
+            id="sql-logo"
+            class="skill-logo"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/git.dark.png"
+            alt="git_skill"
+            id="git-logo"
+            class="skill-logo"
+          />
+        </div>
+      </div>
+    </div>
+    <!---------- Projects ---------->
+
+    <div id="my-projects" class="section">
+      <h2 id="my-projects-title">My projects</h2>
+      <div id="slider" class="slider">
+        <div class="slides-wrapper">
+          <ul class="slides">
+            <li class="slide">
+              <a href="https://github.com/victortarroni/bankist">
+                <img src="/images/Bankist.project.png" alt="Bankist" />
+              </a>
+            </li>
+            <li class="slide">
+              <a href="https://github.com/victortarroni/PigGame">
+                <img src="/images/Pig-game.project.png" alt="Pig-game" />
+              </a>
+            </li>
+            <li class="slide">
+              <a href="https://github.com/victortarroni/guess-my-number">
+                <img src="/images/guess-my-number.png" alt="guess-my-number" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="control slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
+        <a class="control slider-next"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="slider-dots"></div>
+      </div>
+    </div>
+    <!---------- Contact ---------->
+    <div id="my-contact" class="section">
+      <div id="contact-1">
+        <h2 class="sub-title">Contact</h2>
+        <p class="sub-text" id="contact-text">
+          Thank you for reviewing my qualifications.<br />
+          I look forward to sharing more about my skills and experiences.<br />
+          Please feel free to contact me at<span class="contact-bold">
+            0753825-1953</span
+          >, through my email address:
+          <span class="contact-bold">victortarroni@gmail.com</span> or through
+          my social media channels attached to the website.
+        </p>
+      </div>
+      <div id="contact-logo">
+        <a href="https://github.com/victortarroni" target="_blank"
+          ><img src="/images/github.png" alt="victor_github" id="github"
+        /></a>
+
+        <a
+          href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
+          target="_blank"
+          ><img src="/images/linkedin.png" alt="victor_linkedin" id="linkedin"
+        /></a>
+
+        <img src="/images/maps.png" alt="location" id="googlemaps" />
+      </div>
+
+      <!-- ---------contact night mode ----------------- -->
+      <div id="contact-logo-dark" class="section">
+        <a href="https://github.com/victortarroni" target="_blank"
+          ><img src="/images/github.dark.png" alt="victor_github" id="github"
+        /></a>
+
+        <a
+          href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
+          target="_blank"
+          ><img
+            src="/images/linkedin.dark.png"
+            alt="victor_linkedin"
+            id="linkedin"
+        /></a>
+
+        <img src="/images/maps.dark.png" alt="location" id="googlemaps" />
+      </div>
+    </div>
+    <footer class="section">Website Developed by Victor Tarroni</footer>
+  </body>
+</html>

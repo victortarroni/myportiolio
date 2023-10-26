@@ -1,0 +1,188 @@
+#header {
+width: auto;
+height: 1006px;
+margin-top: 80px;
+background-image: var(--main-header);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.sticky{
+  position: fixed !important; 
+  background-color: white;
+  left: 0;
+  height: 100px;
+}
+
+
+#menu {
+  width: auto;
+  height: 108px;
+  /* add aqui para que o menu esteja acima da imagem do background */
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: large;
+  background-color: var(--primary-color);
+}
+
+
+.menu-holder {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link{
+  color: var(--text-primary);
+}
+
+.hidden-desktop{
+  display: none;
+}
+
+
+
+
+
+.menu-holder li{
+  margin: 32px 105px 149px 105px;
+  
+}
+
+#header-content{
+  height: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 150px;
+}
+
+
+
+#ownname {
+  color: #00D1C7;
+}
+
+#content-header {
+  
+  font-size: 52px;
+  font-weight: 700;
+}
+
+
+#sub-header {
+  font-size: 52px;
+  font-weight: 500;
+}
+
+
+#about-me-btn {
+  color: white;
+  padding:13px 32px 14px 32px;
+  background-color: #00D1C7;
+  border-radius: 6px;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Mobile Version */
+
+@media(max-width: 768px){
+  
+  #header{
+    height: 754px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #menu{
+    height: 125px;
+    margin-bottom: 134px;
+  }
+
+  #btn-close {
+    font-size: 30px;
+  }
+
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .hidden-mobile{
+    display: none;
+  }
+
+  .hidden-desktop{
+    display: block;
+  }
+
+  #menu ul{
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* eu poderia tambem utilizar aqui ao inves de top, left, right, bottom. Eu poderia usar width: 100vw e height:100vh */
+    background-color: var(--primary-color);
+
+  }
+
+
+  .list-mobile {
+    display: list-item;
+    flex-grow: 1;
+    /* Aqui eu usei esta classe no primeiro li e no segundo, e usei o flex-grow:1 para esticar e centralisar os outros li do menu */
+    font-size: 30px;
+    /* align-self: flex-end; */
+    /* align self vai ser somente no item que voce esta focando. Lembre se que o x de abrir e fechar o menu, esta no primeiro li. Entao o que fizemos aqui foi colocar ele para a direita. O ultimo li tambem foi mas ele nao tem elemento nenhum*/
+    padding-right: 21px !important;
+    /* toda vez que riscar na inspencao. use o !important para o codigo priorizar e o comando surtir efeito */
+  }
+
+  #menu li {
+    margin: 0 !important;
+    padding: 25px 0;
+  }
+
+  .hidden-menu{
+    display: none;
+  }
+
+  #header-content{
+    height: 100vh;
+    /* quando voce determina em vh ele pega o tamanho do display pelo qual o website esta sendo utilizado. Ja o 100% um compoprtamento um pouco imprevisivel. leia um pouco mais da diferenca */
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #content-header{
+    font-size: 27.63px;
+  font-weight: 700;
+  }
+
+  #about-me-btn {
+    color: white;
+    padding:7.77px 18.87px 8.51px 19.13px;
+    background-color: #00D1C7;
+    border-radius: 6px;
+    font-size: 13.15px;
+  }
+
+  #sub-header {
+    font-size: 27.63px;
+    font-weight: 500;
+  }
+
+}
+

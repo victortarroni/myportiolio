@@ -1,0 +1,125 @@
+#my-projects{
+  position: relative;
+  width: auto;
+  height: 704px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+ #my-projects-title{
+  margin-top: 20px;
+  color: var(--text-primary);
+
+ }
+ .slider {
+  position: relative;
+  /* A declaracao do relative aqui è para podermos trabalhar com as setas que serao declaradas relative*/
+  max-width: 900px;
+  /* max-width aqui è usado para controlar o tamanho do slide por conta do responsivo*/
+  width: 100%;
+  margin: auto; /*o margin auto è usado para centealizar to container.*/
+}
+
+.slides-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  /* coloquei top: 0 aqui porque ele vai pegar a posicao 0 do slide-wrapper, ou seja, ele vai cobrri o slider-wrapper*/
+  margin: 0;
+  padding: 0;
+  /* a lista vem com margine padding, e aqui o arthur tirou as pre-formatacoes */
+  list-style: none;
+  user-select: none;
+  /* quando voce usa o ser-select: none, voce faz com que quando voe arraste a imagem ou o texto em evidencia para a proxima imagem ou text, nao seja selecionado mas somente se mova. Isso è mais usado para o mobile mas è bom declarar na versao geral mesmo*/
+  /* left: 0; */
+  /* left: -100%; */
+  width: 300%;
+  /* width de 300% porque sao os tres slides somados juntos */ 
+
+  /* suavizar a transicao do efeito da mudanca, desliza na mudanca*/
+  transition: left .5s;
+}
+
+.slide {
+  flex: 1;
+  /* flex:1 se relaciona ao tamanho do container original. como colocamos overflow: hidden na div-parent. iSSO NOS DA A CHANCE DE TERMOS DIV filhos maiores na largura que o pai */
+  height: 400px;
+}
+
+.slider-prev{
+  position: absolute;
+  left: -10px;
+  /* posicionar o elemento na linha de 50% da altura container */
+  top: 50%;
+  /* vai posicionar o elemento no top: 50% deste caso conforme a altura do elemento que esta sendo manipulado*/
+  transform: translateY(-50%);
+}
+
+.slider-next{
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+ /* Mobile */
+@media(max-width: 430px){
+  #my-projects{
+  width: 100%;
+  height: 320px;
+  background-color: var(--secondary-color);
+ }
+ #my-projects{
+  position: relative;
+  width: auto;
+  height: 304px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+ }
+
+ .slider-prev{
+  position: absolute;
+  left: 10px;
+  /* posicionar o elemento na linha de 50% da altura container */
+  top: 40%;
+  /* vai posicionar o elemento no top: 50% deste caso conforme a altura do elemento que esta sendo manipulado*/
+  transform: translateY(-50%);
+  }
+
+  .slider-next{
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .slide {
+    flex: 1;
+    /* flex:1 se relaciona ao tamanho do container original. como colocamos overflow: hidden na div-parent. iSSO NOS DA A CHANCE DE TERMOS DIV filhos maiores na largura que o pai */
+    height: 200px;
+  }
+
+}
+
+
+ /* slides */
+ 
+
+
+
+
+ 
+
