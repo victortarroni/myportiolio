@@ -5,7 +5,6 @@
   display: flex;
 }
 
-
 #contact-1{
   width: 50%;
   height:100%;
@@ -16,13 +15,9 @@
   padding-left: 150px;
 }
 
-
 #contact-text{
   width: 410px;
   height: 135px;
-}
-@media(max-width: 430px){
-  
 }
 
 .contact-bold{
@@ -38,8 +33,6 @@
 
 }
 
-
-
 #contact-logo-dark{
   display: none !important;
 }
@@ -50,13 +43,11 @@
   
 }
 
-
 #linkedin{
   width: 94px;
   height: 93px;
   
 }
-
 
 #googlemaps{
   width: 58px;
@@ -64,20 +55,7 @@
   
 }
 
-
-footer {
-  width: auto;
-  height: 40px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Mobile Version */
-
 
 @media(max-width: 768px){
 

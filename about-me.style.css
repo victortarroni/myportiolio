@@ -6,8 +6,6 @@
   display: flex;
 }
 
-
-
 #about-pic-container {
   width: 40%;
   height: 100%;
@@ -17,11 +15,9 @@
   align-items: center;
 }
 
-
 #about-img {
   width: 70%;
 }
-
 
 #about-container {
   width: 60%;
@@ -33,15 +29,11 @@
   text-align: justify;
 }
 
-
-
 #about-me-title {
   color: white;
   font-weight: 500;
   font-size: 51px;
 }
-
-
 
 #about-me-text {
   color: white;
@@ -49,8 +41,6 @@
   width: 695.94px;
   font-weight: 300;
 }
-
-
 
 /* Mobile version */
 

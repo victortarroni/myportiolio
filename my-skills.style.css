@@ -5,8 +5,6 @@ display: flex;
 
 }
 
-
-
 #text-container{
   width: 40%;
   height: 100%;
@@ -18,7 +16,6 @@ display: flex;
   
 }
 
-
 #my-skills-logo, #my-skills-logo-dark {
   width: 60%;
   height: 100%;
@@ -28,26 +25,20 @@ display: flex;
   align-items: center;
 }
 
-
 .skill-logo{
   margin-right: 100px;
   min-width: 100px;
 }
-
-
-
 
 #html-logo{
   width:107.05px;
   height:107.05px;
 }
 
-
 #css-logo{
   width:74.97px;
   height:107.05px;
 }
-
 
 #js-logo{
   width:107.05px;
@@ -68,7 +59,6 @@ display: flex;
   width: 226.18px;
   height: 93.67px;
 }
-
 
 #my-skills-logo-dark{
   display: none;
@@ -137,8 +127,6 @@ display: flex;
    display: none;
     /* adicionei o none porque depois que organisei de forma uniforme todos debaixo da categoria mobile, saiu do padrao*/
   }
-
-
 
   .skill-logo{
     margin-right: 0px;
