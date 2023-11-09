@@ -1,13 +1,13 @@
-#my-contact{
+#my-contact {
   width: auto;
   height: 577px;
   background-color: var(--primary-color);
   display: flex;
 }
 
-#contact-1{
+#contact-1 {
   width: 50%;
-  height:100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,12 +15,12 @@
   padding-left: 150px;
 }
 
-#contact-text{
+#contact-text {
   width: 410px;
   height: 135px;
 }
 
-.contact-bold{
+.contact-bold {
   font-weight: bold;
 }
 
@@ -30,85 +30,79 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
-#contact-logo-dark{
+#contact-logo-dark {
   display: none !important;
 }
 
-#github{
+#github {
   width: 104px;
   height: 104px;
-  
 }
 
-#linkedin{
+#linkedin {
   width: 94px;
   height: 93px;
-  
 }
 
-#googlemaps{
+#googlemaps {
   width: 58px;
   height: 83px;
-  
 }
 
 /* Mobile Version */
 
-@media(max-width: 768px){
+@media screen and (max-width: 768px) {
 
-  #my-contact{
-    width: 100%;
-    height: 577px;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column; 
+  #my-contact {
+      width: 100%;
+      height: 577px;
+      background-color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
   }
 
-  #contact-1{
-    width: 100%;
-    height:60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
+  #contact-1 {
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
   }
 
-  #contact-text{
-    width: 323px;
-    height: 108px;
+  #contact-text {
+      width: 323px;
+      height: 108px;
   }
 
   #contact-logo,  #contact-logo-dark {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
   }
 
-  #github{
-    width: 49.6px;
-    height: 49.6px;
-    margin-left: 84px;
-    margin-right: 0px;
-  } 
-
-  #linkedin{
-    width: 44.83px;
-    height: 44.35px;
-    margin-right: 0px;
-    padding-left: 0px;
+  #github {
+      width: 49.6px;
+      height: 49.6px;
+      margin-left: 84px;
+      margin-right: 0px;
   }
 
-  #googlemaps{
-    width: 27.66px;
-    height: 39.58px;
-    margin-right: 83.79px;
+  #linkedin {
+      width: 44.83px;
+      height: 44.35px;
+      margin-right: 0px;
+      padding-left: 0px;
   }
 
+  #googlemaps {
+      width: 27.66px;
+      height: 39.58px;
+      margin-right: 83.79px;
+  }
 }
-
