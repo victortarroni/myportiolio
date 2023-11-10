@@ -1,11 +1,10 @@
 #mySkills {
-width: auto;
-height: 529px;
-display: flex;
-
+  width: auto;
+  height: 529px;
+  display: flex;
 }
 
-#text-container{
+#text-container {
   width: 40%;
   height: 100%;
   display: flex;
@@ -13,7 +12,6 @@ display: flex;
   justify-content: center;
   align-items: start;
   padding-left: 150px;
-  
 }
 
 #my-skills-logo, #my-skills-logo-dark {
@@ -25,142 +23,87 @@ display: flex;
   align-items: center;
 }
 
-.skill-logo{
+.skill-logo {
   margin-right: 100px;
   min-width: 100px;
+  width: 5rem;
 }
 
-#html-logo{
-  width:107.05px;
-  height:107.05px;
+.skill-logo-dark {
+  margin-right: 100px;
+  min-width: 100px;
+  width: 5rem;
+  filter: grayscale(100%);
 }
 
-#css-logo{
-  width:74.97px;
-  height:107.05px;
-}
-
-#js-logo{
-  width:107.05px;
-  height:107.05px;
-}
-
-#cs-logo{
-  width:107.05px;
-  height:107.05px;
-}
-
-#sql-logo{
-  width: 200.62px;
-  height: 93.67px;
-}
-
-#git-logo{
-  width: 226.18px;
-  height: 93.67px;
-}
-
-#my-skills-logo-dark{
+#my-skills-logo-dark {
   display: none;
 }
 
 /* Mobile Version */
 
-@media(max-width:768px){
+@media screen and (max-width:768px) {
 
   #mySkills {
-  width: 100%;
-  height: 719px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 85px;
+      width: 100%;
+      height: 719px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 85px;
   }
 
-  #text-container{
-    width: auto;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-left: 35px;
-    margin-bottom: 74px;
+  #text-container {
+      width: auto;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 35px;
+      margin-bottom: 74px;
   }
 
   #text-container h2 {
-    margin-top: 68px;
+      margin-top: 68px;
   }
 
   #text-container p {
-    width: 323px;
-    height: 72px;
-    text-align: start;
+      width: 323px;
+      height: 72px;
+      text-align: start;
   }
 
   #my-skills-logo, #my-skills-logo-dark {
-    width: auto;
-    height: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+      width: auto;
+      height: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
   }
 
   #my-skills-logo > div {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
   }
 
   #my-skills-logo-dark > div {
-    width: 50%;
-    text-align: center;
-    /* display: none; */
-    /* adicionei o none porque depois que organisei de forma uniforme todos debaixo da categoria mobile, saiu do padrao*/
+      width: 50%;
+      text-align: center;
   }
 
   #my-skills-logo-dark {
-   display: none;
-    /* adicionei o none porque depois que organisei de forma uniforme todos debaixo da categoria mobile, saiu do padrao*/
+      display: none;
   }
 
-  .skill-logo{
-    margin-right: 0px;
-    min-width: 0px;
+  .skill-logo {
+      margin-right: 0px;
+      min-width: 0px;
+      height: 5rem;
+      width: 5rem;
   }
-
-  #html-logo{
-    width:71.73px;
-    height:71.73px;
-  }
-
-  #css-logo{
-    width:50.9px;
-    height:71.73px;
-  }
-
-  #js-logo{
-    width:71.73px;
-    height:71.73px;
-  }
-
-  #cs-logo{
-    width:71.73px;
-    height:71.73px;
-  }
-
-  #sql-logo{
-    width: 110.76px;
-    height: 51.71px;
-  }
-
-  #git-logo{
-    width: 124.87px;
-    height: 51.71px;
-  }
-
-  }
+}

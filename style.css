@@ -1,23 +1,20 @@
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   width: auto;
   height: auto;
   color: var(--text-primary);
   line-height: 1.6;
   background-color: var(--primary-color);
   font-family: 'Inter', sans-serif;
-  
 }
 
 .section {
-  /* padding: 15rem 3rem; */
   border-top: 1px solid #ddd;
-
   transition: transform 1s, opacity 1s;
 }
 
@@ -26,35 +23,33 @@ body{
   transform: translateY(8rem);
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--text-primary);
-  
 }
 
-#icon{
+#icon {
   width: 20px;
   height: 20px;
-  
 }
 
 h1, h2 {
   line-height: 1.2;
 }
 
-p{
+p {
   margin: 10px 0;
 }
 
-img{
+img {
   width: 100%;
 }
 
-.sub-title{
+.sub-title {
   font-weight: 700;
   color: var(--sub-title-color);
   font-size: 51px;
@@ -71,62 +66,57 @@ footer {
   align-items: center;
 }
 
-.sub-text{
+.sub-text {
   font-weight: 300;
 }
-@media(max-width: 430px){
-  .sub-text{
-  font-weight: 300;
-  font-size: 15px;
-  }
 
-}
-
-:root{
-  --primary-color:white;
-  --secondary-color:#00D1C7;
-  --text-primary:black;
-  --sub-title-color:#00D1C7;
-  --main-header:url(/images/header.png);
+:root {
+  --primary-color: white;
+  --secondary-color: #00D1C7;
+  --text-primary: black;
+  --sub-title-color: #00D1C7;
+  --main-header: url(/images/header.png);
   --media-background: url(/images/media.light.backg.png);
 }
 
-.dark-theme{
-  --primary-color:#000000;
-  --secondary-color:#1D2C33;
-  --text-primary:white;
-  --main-header:url(/images/night.header.png);
+.dark-theme {
+  --primary-color: #000000;
+  --secondary-color: #1D2C33;
+  --text-primary: white;
+  --main-header: url(/images/night.header.png);
   --media-night-header: url();
 }
 
-.dark-theme #my-skills-logo-dark{
+.dark-theme #my-skills-logo-dark {
   display: flex;
 }
 
-.dark-theme #my-skills-logo{
+.dark-theme #my-skills-logo {
   display: none;
 }
 
-.dark-theme #contact-logo-dark{
+.dark-theme #contact-logo-dark {
   display: flex;
 }
 
-.dark-theme #dark-icon{
+.dark-theme #dark-icon {
   display: none;
 }
 
-@media(max-width: 430px){
-  .sub-title{
-    font-weight: 700;
-    color: var(--sub-title-color);
-    font-size: 30px;
-  }
-}
-
-@media(max-width:400px){
+@media screen and (max-width:400px) {
   body {
-    width: 393px;
-    height: 754px;
+      width: 393px;
+      height: 754px;
+  }
+
+  .sub-title {
+      font-weight: 700;
+      color: var(--sub-title-color);
+      font-size: 30px;
+  }
+
+  .sub-text {
+      font-weight: 300;
+      font-size: 15px;
   }
 }
-
