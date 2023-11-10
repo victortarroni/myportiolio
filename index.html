@@ -4,26 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary Meta Tags -->
     <title>Victor Tarroni - Web Developer Portfolio</title>
     <meta name="title" content="Victor Tarroni - Web Developer Portfolio" />
-    <meta name="description" content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
+    <meta
+      name="description"
+      content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS."
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://victortarroni.com" />
-    <meta property="og:title" content="Victor Tarroni - Web Developer Portfolio" />
-    <meta property="og:description" content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
+    <meta
+      property="og:title"
+      content="Victor Tarroni - Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS."
+    />
     <meta property="og:image" content="https://i.imgur.com/8SE9eKn.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://victortarroni.com" />
-    <meta property="twitter:title" content="Victor Tarroni - Web Developer Portfolio" />
-    <meta property="twitter:description" content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
+    <meta
+      property="twitter:title"
+      content="Victor Tarroni - Web Developer Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS."
+    />
     <meta property="twitter:image" content="https://i.imgur.com/8SE9eKn.png" />
-
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
@@ -53,22 +67,23 @@
     <script>
       // This script is positioned at the root of the webpage to prevent any noticeable page flickering or flashing. By placing this script here, it ensures that this code is processed and rendered by the browser prior to the entire HTML page being fully displayed.  //
 
-      const theme = localStorage.getItem("theme");
+      const theme = localStorage.getItem('theme');
       if (theme) {
-        const action = theme === "dark" ? "add" : "remove";
-        document.body.classList[action]("dark");
+        const action = theme === 'dark' ? 'add' : 'remove';
+        document.body.classList[action]('dark');
       } else if (
         matchMedia &&
-        matchMedia("(prefers-color-scheme: dark)").matches
+        matchMedia('(prefers-color-scheme: dark)').matches
       ) {
-        document.body.classList.add("dark-theme");
+        document.body.classList.add('dark-theme');
       }
     </script>
 
-    <!---------- header ---------->
+    <!---------- Header ---------->
 
     <div id="header">
       <div id="menu" class="hidden-menu">
+        <h1>Victor Tarroni</h1>
         <ul class="menu-holder">
           <li id="btn-close" class="hidden-desktop list-mobile">&times;</li>
           <li><a href="#about-me" class="link">About Me</a></li>
@@ -80,7 +95,9 @@
           <li class="hidden-desktop list-mobile"></li>
         </ul>
       </div>
-      <div>
+
+      <div id="mobile-menu">
+        <h1>Victor Tarroni</h1>
         <svg
           width="25"
           height="17"
@@ -96,26 +113,30 @@
           />
         </svg>
       </div>
+    </div>
 
-      <!-- Text Content -->
+    <!-- Hero -->
 
-      <div id="header-content">
-        <h1 id="content-header">
-          Hey, I'm <br /><span id="ownname">Victor Tarroni</span>
-        </h1>
-        <h2 id="sub-header">Web and Software developer</h2>
-        <p class="sub-text">
-          Hey, I'm Victor Tarroni. I am a software engineer based in
-          Macclesfield, UK.
-        </p>
-        <a href="#about-me" id="about-me-btn">About Me</a>
-      </div>
+    <div id="hero">
+      <h1 id="content-header">
+        Hey, I'm <br /><span id="ownname">Victor Tarroni</span>
+      </h1>
+      <h2 id="sub-header">Web and Software developer</h2>
+      <p class="sub-text">
+        Hey, I'm Victor Tarroni. I am a software engineer based in Macclesfield,
+        UK.
+      </p>
+      <a href="#about-me" id="about-me-btn">About Me</a>
     </div>
 
     <!---------- About me ---------->
     <div id="about-me" class="section">
       <div id="about-pic-container">
-        <img src="/images/Nova Foto 1.png" alt="A photo of Victor Tarroni, a web developer." id="about-img" />
+        <img
+          src="/images/Nova Foto 1.png"
+          alt="A photo of Victor Tarroni, a web developer."
+          id="about-img"
+        />
       </div>
       <div id="about-container">
         <h2 id="about-me-title">About Me</h2>
@@ -247,29 +268,51 @@
     <!---------- Projects ---------->
 
     <div id="my-projects" class="section">
-      <h2 id="my-projects-title" >My projects</h2>
+      <h2 id="my-projects-title">My projects</h2>
       <div id="slider">
         <div class="slides-wrapper">
           <ul class="slides">
             <li class="slide">
-              <a href="https://github.com/victortarroni/bankist" target="_blank"> 
-                <img src="/images/Bankist.project.png" alt="Screenshot of the Bankist website - a fictional online banking platform." />
+              <a
+                href="https://github.com/victortarroni/bankist"
+                target="_blank"
+              >
+                <img
+                  src="/images/Bankist.project.png"
+                  alt="Screenshot of the Bankist website - a fictional online banking platform."
+                />
               </a>
             </li>
             <li class="slide">
-              <a href="https://github.com/victortarroni/PigGame" target="_blank">
-                <img src="/images/Pig-game.project.png" alt="Screenshot of the Pig Game project - a fun dice game developed using HTML, CSS, and JavaScript." />
+              <a
+                href="https://github.com/victortarroni/PigGame"
+                target="_blank"
+              >
+                <img
+                  src="/images/Pig-game.project.png"
+                  alt="Screenshot of the Pig Game project - a fun dice game developed using HTML, CSS, and JavaScript."
+                />
               </a>
             </li>
             <li class="slide">
-              <a href="https://github.com/victortarroni/guess-my-number" target="_blank">
-                <img src="/images/guess-my-number.png" alt="Screenshot of the Guess My Number project - a number guessing game developed with HTML, CSS, and JavaScript." />
+              <a
+                href="https://github.com/victortarroni/guess-my-number"
+                target="_blank"
+              >
+                <img
+                  src="/images/guess-my-number.png"
+                  alt="Screenshot of the Guess My Number project - a number guessing game developed with HTML, CSS, and JavaScript."
+                />
               </a>
             </li>
           </ul>
         </div>
-        <a class="control slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
-        <a class="control slider-next"><i class="fa-solid fa-chevron-right"></i></a>
+        <a class="control slider-prev"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></a>
+        <a class="control slider-next"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
         <div class="slider-dots"></div>
       </div>
     </div>
@@ -289,22 +332,35 @@
       </div>
       <div id="contact-logo">
         <a href="https://github.com/victortarroni" target="_blank"
-          ><img src="/images/github.png" alt="GitHub image linking to Victor Tarroni's GitHub profile" id="github"
+          ><img
+            src="/images/github.png"
+            alt="GitHub image linking to Victor Tarroni's GitHub profile"
+            id="github"
         /></a>
 
         <a
           href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
           target="_blank"
-          ><img src="/images/linkedin.png" alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile" id="linkedin"
+          ><img
+            src="/images/linkedin.png"
+            alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
+            id="linkedin"
         /></a>
 
-        <img src="/images/maps.png" alt="Google Maps icon linking to Victor Tarroni's location on Google Maps" id="googlemaps" />
+        <img
+          src="/images/maps.png"
+          alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
+          id="googlemaps"
+        />
       </div>
 
       <!-- ---------contact night mode ----------------- -->
       <div id="contact-logo-dark" class="section">
         <a href="https://github.com/victortarroni" target="_blank"
-          ><img src="/images/github.dark.png" alt="GitHub image linking to Victor Tarroni's GitHub profile" id="github"
+          ><img
+            src="/images/github.dark.png"
+            alt="GitHub image linking to Victor Tarroni's GitHub profile"
+            id="github"
         /></a>
 
         <a
@@ -316,7 +372,11 @@
             id="linkedin"
         /></a>
 
-        <img src="/images/maps.dark.png" alt="Google Maps icon linking to Victor Tarroni's location on Google Maps" id="googlemaps" />
+        <img
+          src="/images/maps.dark.png"
+          alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
+          id="googlemaps"
+        />
       </div>
     </div>
     <footer class="section">Website Developed by Victor Tarroni</footer>

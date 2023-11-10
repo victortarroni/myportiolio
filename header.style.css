@@ -1,39 +1,48 @@
-#header {
-  width: auto;
-  height: 1006px;
-  margin-top: 80px;
-  background-image: var(--main-header);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 
 .sticky {
   position: fixed !important;
   background-color: white;
   left: 0;
-  height: 100px;
 }
 
 #menu {
-  width: 100%;
   height: 108px;
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
   font-weight: bold;
   font-size: large;
   background-color: var(--primary-color);
   z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+#menu h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#mobile-menu {
+  display: none;
 }
 
 .menu-holder {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 48px;
 }
 
 .link {
+  font-size: 20px;
   color: var(--text-primary);
 }
 
@@ -41,17 +50,18 @@
   display: none;
 }
 
-.menu-holder li {
-  margin: 32px 105px 149px 105px;
-}
-
-#header-content {
-  height: 880px;
+#hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding-left: 150px;
+  height: 100vh;
+  padding: 0 108px;
+
+  background-image: var(--main-header);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #ownname {
@@ -70,23 +80,15 @@
 
 #about-me-btn {
   color: white;
-  padding: 13px 32px 14px 32px;
+  padding: 14px 32px;
   background-color: #00D1C7;
   border-radius: 6px;
   scroll-behavior: smooth;
 }
 
-
-
 /* Mobile Version */
 
 @media screen and (max-width: 768px) {
-
-  #header {
-      height: 754px;
-      background-repeat: no-repeat;
-      background-position: center;
-  }
 
   #menu {
       height: 125px;
@@ -94,15 +96,26 @@
       z-index: 10;
   }
 
-  #btn-close {
-      font-size: 30px;
+  #mobile-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      height: 48px;
+      border-bottom: 1px solid black;
   }
 
-  #menu-icon {
-      display: block;
-      position: absolute;
-      top: 5px;
-      left: 5px;
+  #hero {
+      padding: 0 35px;
+  }
+
+  #mobile-menu h1 {
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  #btn-close {
+      font-size: 30px;
   }
 
   .hidden-mobile {
@@ -121,7 +134,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-/* Alternatively, here could be used instead of 'top', 'left', 'right', 'bottom'. Utilizing 'width: 100vw' and 'height: 100vh' provides an alternative approach */
+/* Alternatively, here could be used instead of 'top', 'left', 'right', 'bottom'. Utilizing 'width: 100vw' and 'height: 100vh' provides an alternative approach or I could use inset:0 */
       background-color: var(--primary-color);
   }
 
@@ -139,31 +152,35 @@
   }
 
   .hidden-menu {
-      display: none;
+      display: none !important;
   }
 
   #header-content {
       height: 100vh;
 /* Specifying in 'vh' considers the size of the display the website is viewed on. On the contrary, '100%' may exhibit somewhat unpredictable behavior. Delve deeper into the differences for a better understanding */
-      padding-left: 35px;
-      padding-right: 35px;
+      padding: 0 35px;
   }
 
   #content-header {
-      font-size: 27.63px;
+      font-size: 28px;
       font-weight: 700;
   }
 
   #about-me-btn {
       color: white;
-      padding: 7.77px 18.87px 8.51px 19.13px;
+      padding: 8px 16px;
       background-color: #00D1C7;
       border-radius: 6px;
-      font-size: 13.15px;
+      font-size: 12px;
   }
 
   #sub-header {
-      font-size: 27.63px;
+      font-size: 24px;
       font-weight: 500;
   }
+
+  .menu-holder {
+  gap: 0;
+  }
+
 }

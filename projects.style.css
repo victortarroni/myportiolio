@@ -57,18 +57,24 @@ width: 300%;
 
 .slider-prev {
   position: absolute;
-  left: -10px;
+  left: -40px;
 /* Position the element on the line at 50% of the container's height. */
 top: 50%;
 /* This will position the element at 'top: 50%', adjusting according to the height of the element being manipulated. */
 transform: translateY(-50%);
+background-color: white;
+padding: 10px;
+border-radius: 6px;
 }
 
 .slider-next{
 position: absolute;
-right: -10px;
+right: -40px;
 top: 50%;
 transform: translateY(-50%);
+background-color: white;
+padding: 10px;
+border-radius: 6px;
 }
 
 /* Mobile */

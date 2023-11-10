@@ -1,6 +1,7 @@
 "use stric";
 
-var icon = document.getElementById("icon");
+//#region Dark-theme
+const icon = document.getElementById("icon");
 
 icon.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
@@ -11,7 +12,7 @@ icon.addEventListener("click", () => {
     icon.src = "/images/Vector.png";
   }
 });
-//
+//#endregion
 
 // burguer Menu
 
@@ -175,6 +176,7 @@ window.addEventListener("load", () => {
     console.log(1);
     if (slide === slidesLength) {
       /* 'return' is to abort the function. */
+      slide = 0;
       return;
     }
     slide++;
