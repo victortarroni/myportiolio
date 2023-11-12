@@ -1,11 +1,13 @@
 "use strict";
 
+const query = document.querySelector.bind(document);
+const queryAll = document.querySelectorAll.bind(document);
+
 //#region Dark-theme
 const icon = document.getElementById("icon");
 
 icon.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
-
   if (document.body.classList.contains("dark-theme")) {
     icon.src = "/images/white-vector.png";
   } else {
@@ -14,13 +16,11 @@ icon.addEventListener("click", () => {
 });
 //#endregion
 
-// burguer Menu
+//#region Burguer Menu
 
-const burguerMenu = document.querySelector("#menu-icon");
-
-const respMenu = document.querySelector("#menu");
-
-const bttnClose = document.querySelector("#btn-close");
+const burguerMenu = query("#menu-icon");
+const respMenu = query("#menu");
+const bttnClose = query("#btn-close");
 
 const removeHidden = function() {
   respMenu.classList.remove("hidden-menu");
@@ -31,17 +31,16 @@ const closeMenu = function() {
 };
 
 burguerMenu.addEventListener("click", removeHidden);
-
 bttnClose.addEventListener("click", closeMenu);
+//#endregion
 
-// fixed menu //
+//#region fixed menu //
 
-const menuBar = document.querySelector(".menu-holder");
-const menuBarHeight = document
-  .querySelector("#menu")
+const menuBar = query(".menu-holder");
+const menuBarHeight = query("#menu")
   .getBoundingClientRect().height;
-const menu = document.querySelector("#menu");
-const header = document.querySelector("#header");
+const menu = query("#menu");
+const header = query("#header");
 
 const fixedMenu = function(entries) {
   const [entry] = entries;
@@ -60,10 +59,10 @@ const menuObserver = new IntersectionObserver(fixedMenu, {
 
 menuObserver.observe(header);
 
-// Rolamento //
-document
-  .querySelector(".menu-holder")
-  .addEventListener("click", function(elem) {
+//#endregion
+
+//#region smooth scrolling //
+menuBar.addEventListener("click", function(elem) {
     elem.preventDefault();
     respMenu.classList.add("hidden-menu");
     if (elem.target.classList.contains("link")) {
@@ -88,8 +87,9 @@ document
       });
     }
   });
+//#endregion
 
-// faded menu //
+//#region faded menu //
 
 const fadedmenu = function(e) {
   if (e.target.classList.contains("link")) {
@@ -121,9 +121,10 @@ document.querySelector("#menu").addEventListener("mouseout", function(e) {
     icon.style.opacity = 1;
   }
 });
+//#endregion
 
-// revealing sections //
-const sections = document.querySelectorAll(".section");
+//#region revealing sections //
+const sections = queryAll(".section");
 
 const reavealingSect = function(entries, observer) {
   const [entry] = entries;
@@ -142,21 +143,22 @@ sections.forEach(function(section) {
   sectionOberver.observe(section);
   section.classList.add("section--hidden");
 });
+//#endregion
 
-// Projects section //
+//#region Projects section //
 
 
 /* The addEventListener(load) triggers the function when the page loads. This is the default behavior. */
 window.addEventListener("load", () => {
-  const slidesContainer = document.querySelector(".slides");
+  const slidesContainer = query(".slides");
 
   // I created this variable to fetch the number of slides. Since querySelectorAll returns an array, here we can retrieve the number of slides. //
-  const slidesLength = document.querySelectorAll(".slide").length;
+  const slidesLength = queryAll(".slide").length;
 
   // Buttons//
 
-  const prevButton = document.querySelector(".slider-prev");
-  const nextButton = document.querySelector(".slider-next");
+  const prevButton = query(".slider-prev");
+  const nextButton = query(".slider-next");
 
   // 'counter' is the numerical representation of the current slide. //
   let slide = 1;
@@ -192,5 +194,8 @@ window.addEventListener("load", () => {
     slidesContainer.style.left = `${(slide - 1) * -100}%`;
   });
 });
-
+//#endregion
 /**/
+
+
+
