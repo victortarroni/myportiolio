@@ -1,4 +1,4 @@
-"use stric";
+"use strict";
 
 //#region Dark-theme
 const icon = document.getElementById("icon");
