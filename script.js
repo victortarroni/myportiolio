@@ -73,21 +73,6 @@ menuBar.addEventListener("click", function(elem) {
     }
   });
 
-// about me content smooth scrooling //
-
-document
-  .querySelector("#about-me-btn")
-  .addEventListener("click", function(elem) {
-    console.log(elem);
-    elem.preventDefault();
-    if (elem.target.id) {
-      const id = elem.target.getAttribute("href");
-      document.querySelector(id).scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-//#endregion
 
 //#region faded menu //
 

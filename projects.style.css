@@ -77,6 +77,14 @@ padding: 10px;
 border-radius: 6px;
 }
 
+.slider-next i {
+color: black;
+}
+
+.slider-prev i {
+color: black;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 430px){
@@ -107,16 +115,16 @@ transform: translateY(-50%);
 }
 
 .slider-next{
-  position: absolute;
-  right: 10px;
-  top: 40%;
-  transform: translateY(-50%);
+position: absolute;
+right: 10px;
+top: 40%;
+transform: translateY(-50%);
 }
 
 .slide {
-  flex: 1;
-  /* 'flex: 1' relates to the size of the original container. Since we have 'overflow: hidden' on the parent div, as we have child divs wider than the parent in terms of width. */
-  height: 200px;
+flex: 1;
+/* 'flex: 1' relates to the size of the original container. Since we have 'overflow: hidden' on the parent div, as we have child divs wider than the parent in terms of width. */
+height: 200px;
 }
 
 }

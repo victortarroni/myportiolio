@@ -67,15 +67,15 @@
     <script>
       // This script is positioned at the root of the webpage to prevent any noticeable page flickering or flashing. By placing this script here, it ensures that this code is processed and rendered by the browser prior to the entire HTML page being fully displayed.  //
 
-      const theme = localStorage.getItem('theme');
+      const theme = localStorage.getItem("theme");
       if (theme) {
-        const action = theme === 'dark' ? 'add' : 'remove';
-        document.body.classList[action]('dark');
+        const action = theme === "dark" ? "add" : "remove";
+        document.body.classList[action]("dark");
       } else if (
         matchMedia &&
-        matchMedia('(prefers-color-scheme: dark)').matches
+        matchMedia("(prefers-color-scheme: dark)").matches
       ) {
-        document.body.classList.add('dark-theme');
+        document.body.classList.add("dark-theme");
       }
     </script>
 
@@ -126,7 +126,7 @@
         Hey, I'm Victor Tarroni. I am a software engineer based in Macclesfield,
         UK.
       </p>
-      <a href="#about-me" id="about-me-btn">About Me</a>
+      <a href="Junior Software template curriculum.pdf" download="Victor.Tarroni.curriculum.pdf"  id="about-me-btn">Download Resume</a>
     </div>
 
     <!---------- About me ---------->
@@ -310,9 +310,9 @@
         <a class="control slider-prev"
           ><i class="fa-solid fa-chevron-left"></i
         ></a>
-        <a class="control slider-next"
-          ><i class="fa-solid fa-chevron-right"></i
-        ></a>
+        <a class="control slider-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
         <div class="slider-dots"></div>
       </div>
     </div>
@@ -346,12 +346,13 @@
             alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
             id="linkedin"
         /></a>
-
+          <a href="https://www.google.com/maps/@53.2565328,-2.1297842,15.87z?entry=ttu" target="_blank">
         <img
           src="/images/maps.png"
           alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
           id="googlemaps"
         />
+      </a>
       </div>
 
       <!-- ---------contact night mode ----------------- -->
@@ -362,7 +363,6 @@
             alt="GitHub image linking to Victor Tarroni's GitHub profile"
             id="github"
         /></a>
-
         <a
           href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
           target="_blank"
@@ -371,12 +371,13 @@
             alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
             id="linkedin"
         /></a>
-
+        <a href="https://www.google.com/maps/@53.2565328,-2.1297842,15.87z?entry=ttu" target="_blank">
         <img
           src="/images/maps.dark.png"
           alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
           id="googlemaps"
         />
+      </a>
       </div>
     </div>
     <footer class="section">Website Developed by Victor Tarroni</footer>
