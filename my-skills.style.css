@@ -99,7 +99,7 @@
       display: none;
   }
 
-  .skill-logo {
+  .skill-logo, .skill-logo-dark {
       margin-right: 0px;
       min-width: 0px;
       height: 5rem;

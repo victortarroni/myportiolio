@@ -10,9 +10,10 @@ icon.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
     icon.src = "/images/white-vector.png";
-  } else {
-    icon.src = "/images/Vector.png";
-  }
+    return;
+  } 
+    
+  icon.src = "/images/Vector.png";
 });
 //#endregion
 
@@ -46,9 +47,10 @@ const fixedMenu = function(entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
     menu.classList.add("sticky");
-  } else {
-    menu.classList.remove("sticky");
+    return;
   }
+
+  menu.classList.remove("sticky");
 };
 
 const menuObserver = new IntersectionObserver(fixedMenu, {
@@ -73,6 +75,7 @@ menuBar.addEventListener("click", function(elem) {
     }
   });
 
+//#endregion
 
 //#region faded menu //
 
@@ -131,7 +134,6 @@ sections.forEach(function(section) {
 //#endregion
 
 //#region Projects section //
-
 
 /* The addEventListener(load) triggers the function when the page loads. This is the default behavior. */
 window.addEventListener("load", () => {
