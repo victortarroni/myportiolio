@@ -1,6 +1,9 @@
-#about-me {
+#about-me{
+background-color: var(--secondary-color);
+}
+
+#about-me .section {
   height: 600px;
-  background-color: var(--secondary-color);
   display: flex;
 }
 
@@ -40,7 +43,7 @@
 /* Mobile version */
 
 @media screen and (max-width: 768px) {
-  #about-me {
+  #about-me .section {
       height: 797px;
       background-color: var(--secondary-color);
       display: flex;

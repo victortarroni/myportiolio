@@ -70,7 +70,7 @@ menuBar.addEventListener("click", function(elem) {
     if (elem.target.classList.contains("link")) {
       const id = elem.target.getAttribute("href");
       document.querySelector(id).scrollIntoView({
-        behavior: "smooth"
+       behavior: "smooth"
       });
     }
   });

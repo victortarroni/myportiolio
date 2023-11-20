@@ -1,8 +1,11 @@
 #my-projects {
+background-color: var(--secondary-color);
+}
+
+#my-projects .section {
   position: relative;
   width: auto;
   height: 704px;
-  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +91,7 @@
 /* Mobile */
 
 @media screen and (max-width: 430px){
-#my-projects{
+#my-projects .section {
   width: 100%;
   height: 320px;
   background-color: var(--secondary-color);
@@ -102,7 +105,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+}
+
+#my-projects-title {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .slider-prev{

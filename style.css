@@ -14,8 +14,12 @@ body {
 }
 
 .section {
-  border-top: 1px solid #ddd;
   transition: transform 1s, opacity 1s;
+}
+
+.scroll-offset {
+  padding-top: 100px;
+  border-top: 1px solid #ddd;
 }
 
 .section--hidden {
@@ -118,5 +122,8 @@ footer {
   .sub-text {
       font-weight: 300;
       font-size: 15px;
+  }
+  .scroll-offset {
+    padding-top: 20px;
   }
 }

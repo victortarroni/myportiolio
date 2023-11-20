@@ -1,7 +1,10 @@
-#my-contact {
+#my-contact{
+ background-color: var(--primary-color);
+}
+
+#my-contact .section {
   width: auto;
   height: 577px;
-  background-color: var(--primary-color);
   display: flex;
 }
 
@@ -54,7 +57,7 @@
 
 @media screen and (max-width: 768px) {
 
-  #my-contact {
+  #my-contact .section {
       width: 100%;
       height: 577px;
       background-color: var(--primary-color);
