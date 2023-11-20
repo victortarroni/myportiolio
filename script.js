@@ -90,7 +90,7 @@ const fadedmenu = function(e) {
         link.style.color = "#00D1C7";
       }
     });
-    icon.style.opacity = 0.5;
+    
   }
 };
 
@@ -106,7 +106,6 @@ document.querySelector("#menu").addEventListener("mouseout", function(e) {
         link.style.color = "var(--text-primary)";
       }
     });
-    icon.style.opacity = 1;
   }
 });
 //#endregion

@@ -1,5 +1,5 @@
 #my-projects {
-background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 #my-projects .section {
@@ -46,7 +46,7 @@ background-color: var(--secondary-color);
   list-style: none;
   user-select: none;
 /* When you use 'user-select: none', you prevent the selection of the highlighted image or text when dragging to the next image or text; it only moves without being selected. This is more commonly used for mobile but it's good to declare it in the general version as well. */
-  width: 300%;
+width: 300%;
 /* Width of 300% because it's the combined width of the three slides. */
 /* Smooth transition effect to ease the change, slides during the transition. */
   transition: left .5s;
@@ -62,78 +62,78 @@ background-color: var(--secondary-color);
   position: absolute;
   left: -40px;
 /* Position the element on the line at 50% of the container's height. */
-  top: 50%;
+top: 50%;
 /* This will position the element at 'top: 50%', adjusting according to the height of the element being manipulated. */
-  transform: translateY(-50%);
-  background-color: white;
-  padding: 10px;
-  border-radius: 6px;
+transform: translateY(-50%);
+background-color: white;
+padding: 10px;
+border-radius: 6px;
 }
 
 .slider-next{
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  padding: 10px;
-  border-radius: 6px;
+position: absolute;
+right: -40px;
+top: 50%;
+transform: translateY(-50%);
+background-color: white;
+padding: 10px;
+border-radius: 6px;
 }
 
 .slider-next i {
-  color: black;
+color: black;
 }
 
 .slider-prev i {
-  color: black;
+color: black;
 }
 
 /* Mobile */
 
 @media screen and (max-width: 430px){
 #my-projects .section {
-  width: 100%;
-  height: 320px;
-  background-color: var(--secondary-color);
+width: 100%;
+height: 320px;
+background-color: var(--secondary-color);
 }
 
 #my-projects{
-  position: relative;
-  width: auto;
-  height: 304px;
-  background-color: var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+position: relative;
+width: auto;
+height: 304px;
+background-color: var(--secondary-color);
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 #my-projects-title {
-  color: white;
-  font-weight: 500;
-  font-size: 30px;
-  margin-bottom: 40px;
+color: white;
+font-weight: 500;
+font-size: 30px;
+margin-bottom: 40px;
 }
 
 .slider-prev{
-  position: absolute;
-  left: 10px;
+position: absolute;
+left: 10px;
 /* This property sets the left offset of the element, ensuring it is positioned 10 pixels from the left edge of its containing element. */
-  top: 40%;
+top: 40%;
 /* his property positions the top edge of the .slider-prev element at 40% of the height of its containing element. This is a vertical positioning, and it's setting the element's top edge at a distance equal to 40% of the height of its container.*/
-  transform: translateY(-50%);
+transform: translateY(-50%);
 }
 
 .slider-next{
-  position: absolute;
-  right: 10px;
-  top: 40%;
-  transform: translateY(-50%);
+position: absolute;
+right: 10px;
+top: 40%;
+transform: translateY(-50%);
 }
 
 .slide {
-  flex: 1;
+flex: 1;
 /* 'flex: 1' relates to the size of the original container. Since we have 'overflow: hidden' on the parent div, as we have child divs wider than the parent in terms of width. */
-  height: 200px;
+height: 200px;
 }
 
 }

@@ -20,6 +20,7 @@ body {
 .scroll-offset {
   padding-top: 100px;
   border-top: 1px solid #ddd;
+  padding-bottom: 60px;
 }
 
 .section--hidden {
@@ -41,6 +42,9 @@ a {
   height: 20px;
 }
 
+#icon:hover {
+  color: #00D1C7;
+}
 h1, h2 {
   line-height: 1.2;
 }
@@ -123,7 +127,8 @@ footer {
       font-weight: 300;
       font-size: 15px;
   }
+
   .scroll-offset {
-    padding-top: 20px;
+      padding-top: 20px;
   }
 }
