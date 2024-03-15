@@ -5,102 +5,126 @@
 #my-projects .section {
   position: relative;
   width: auto;
-  height: 704px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   z-index: 5;
 }
 
 #my-projects-title {
   color: white;
-  font-weight: 700;
-  font-size: 51px;
-  margin-top: 5%;
+  margin-left: 160px;
+  
 }
 
-#slider {
-  position: relative;
-/* The declaration of 'relative' here is for us to work with the carousel arrows that will be declared as 'relative'. */
-  max-width: 900px;
-/* 'max-width' here is used to control the size of the slide for responsiveness. */
-  width: 100%;
-  margin: auto;
-/* 'margin: auto' is used to center the container. */
+#my-projects-span{
+  color: var(--third-color-);
 }
 
-.slides-wrapper {
-  overflow: hidden;
-  position: relative;
+#wrapping-text-container{
+  max-width: 1090px;
 }
 
-.slides {
+#container-project-text {
+  width: 50%;
+  margin-left: 14%;
+  
+}
+
+.project-txt-title{
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.txt-projects{
+  max-width: 80%;
+  font-size: 19px;
+  margin-bottom: 39px;
+   
+}
+
+
+.project-container{
+  height: 20%;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.project-img{
+  width: 50%;
+  height: 100%;
+  
+}
+
+.project-text{
+  width: 50%;
+  height: 100%;
+}
+
+#project1{
   display: flex;
-  position: relative;
-  top: 0;
-/* I placed 'top: 0' here because it will take the position 0 of the slide-wrapper, meaning it will cover the slider-wrapper. */
-  margin: 0;
-  padding: 0;
-/* The li comes with margin and padding, and here I removed the inherited pre-formatting. */
-  list-style: none;
-  user-select: none;
-/* When you use 'user-select: none', you prevent the selection of the highlighted image or text when dragging to the next image or text; it only moves without being selected. This is more commonly used for mobile but it's good to declare it in the general version as well. */
-width: 300%;
-/* Width of 300% because it's the combined width of the three slides. */
-/* Smooth transition effect to ease the change, slides during the transition. */
-  transition: left .5s;
 }
 
-.slide {
-  flex: 1;
-/* 'flex: 1' relates to the size of the original container. Since we have 'overflow: hidden' on the parent div, this allows us to have child divs with a width larger than the parent and hide the exceeded content. */
-  height: 400px;
+#project2{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.slider-prev {
-  position: absolute;
-  left: -40px;
-/* Position the element on the line at 50% of the container's height. */
-top: 50%;
-/* This will position the element at 'top: 50%', adjusting according to the height of the element being manipulated. */
-transform: translateY(-50%);
-background-color: white;
-padding: 10px;
-border-radius: 6px;
+#project3{
+  display: flex;
 }
 
-.slider-next{
-position: absolute;
-right: -40px;
-top: 50%;
-transform: translateY(-50%);
-background-color: white;
-padding: 10px;
-border-radius: 6px;
+#project1-img{
+  height: 302px;
+  width: 538px;
+  background: url(/images/Myprojects/Bankist-project.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  
+}
+#project2-img{
+  height: 302px;
+  width: 538px;
+  background: url(/images/Myprojects/pigGame.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#project3-img{
+  height: 302px;
+  width: 538px;
+  background: url(/images/Myprojects/GMN.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-.slider-next i {
-color: black;
+#wrapping-projects {
+  width: auto;
+  margin: 0px 95px 0px;
 }
 
-.slider-prev i {
-color: black;
+.project-button {
+  padding: 12px 54px 12px 54px;
+  margin-top: 10%;
+  background: var(--fourth-color-);
+  color: var(--text-primary);
+  border-radius: 6px;
 }
+
 
 /* Mobile */
 
 @media screen and (max-width: 430px){
 #my-projects .section {
 width: 100%;
-height: 320px;
+/* height: 2284px; */
 background-color: var(--secondary-color);
 }
 
 #my-projects{
 position: relative;
 width: auto;
-height: 304px;
 background-color: var(--secondary-color);
 display: flex;
 flex-direction: column;
@@ -112,28 +136,95 @@ color: white;
 font-weight: 500;
 font-size: 30px;
 margin-bottom: 40px;
+margin-left: 20px;
 }
 
-.slider-prev{
-position: absolute;
-left: 10px;
-/* This property sets the left offset of the element, ensuring it is positioned 10 pixels from the left edge of its containing element. */
-top: 40%;
-/* his property positions the top edge of the .slider-prev element at 40% of the height of its containing element. This is a vertical positioning, and it's setting the element's top edge at a distance equal to 40% of the height of its container.*/
-transform: translateY(-50%);
+#project1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.slider-next{
-position: absolute;
-right: 10px;
-top: 40%;
-transform: translateY(-50%);
+#project2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.slide {
-flex: 1;
-/* 'flex: 1' relates to the size of the original container. Since we have 'overflow: hidden' on the parent div, as we have child divs wider than the parent in terms of width. */
-height: 200px;
+#project3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.project-img{
+  width: 100%;
+  height: 50%;
+  }
+
+  #wrapping-text-container{
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #container-project-text {
+    width: 100%;
+    margin: 0px;
+    
+  }
+
+  .project-text{
+    width: 90%;
+    height: 50%;
+    text-align: justify;
+  }
+
+  .txt-projects{
+    max-width: 100%;
+    font-size: 19px;
+    margin-bottom: 20px;
+     
+  }
+
+  #wrapping-projects {
+    width: auto;
+    margin: 0px 0px 0px;
+  }
+
+  .project-container{
+    height: 45%;
+    margin-top: 70px;
+    margin-bottom: 15px;
+  }
+
+  #project1-img{
+    height: 225px;
+    width: 90%;
+    background: url(/images/Myprojects/Bankist-project.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+  }
+  #project2-img{
+    height: 225px;
+    width: 90%;
+    background: url(/images/Myprojects/pigGame.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  #project3-img{
+    height: 225px;
+    width: 90%;
+    background: url(/images/Myprojects/GMN.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
 
 }

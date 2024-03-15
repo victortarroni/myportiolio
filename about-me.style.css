@@ -3,7 +3,6 @@
 }
 
 #about-me .section {
-  height: 600px;
   display: flex;
 }
 
@@ -16,11 +15,12 @@
 }
 
 #about-img {
-  width: 512px;
+  width: 538px;
+  border-radius: 1000000px;
 }
 
 #about-container {
-  width: 60%;
+  /* width: 60%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,10 +28,8 @@
   text-align: justify;
 }
 
-#about-me-title {
-  color: white;
-  font-weight: 500;
-  font-size: 51px;
+#about-me-title{
+  color: var(--fourth-color-);
 }
 
 #about-me-text {
@@ -44,30 +42,22 @@
 
 @media screen and (max-width: 768px) {
   #about-me .section {
-      height: 797px;
+      height: 1000px;
       background-color: var(--secondary-color);
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
   }
 
   #about-pic-container {
-      margin-bottom: 114px;
+      width: 100%;
+      margin-bottom: 20px;
   }
 
   #about-img {
       width: 320px;
       height: 327px;
-  }
-
-  #about-container {
-      width: 60%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
   }
 
   #about-me-title {

@@ -3,18 +3,56 @@
 const query = document.querySelector.bind(document);
 const queryAll = document.querySelectorAll.bind(document);
 
-//#region Dark-theme
+//#region click - day toggle to Dark-theme
 const icon = document.getElementById("icon");
+const iconImg = document.getElementById("icon-img");
+const iconNightmode = document.getElementById("icon-night");
+const iconImgNightmode= document.getElementById("icon-img-night");
 
 icon.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
+  document.body.classList.add("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
-    icon.src = "/images/white-vector.png";
+    icon.style.display = "none";
+    iconImg.style.display = "none";
+    iconNightmode.style.display = "flex";
+    iconImgNightmode.style.display = "flex";
+    document.getElementById("contact-vector-email").src="/images/mail-contact-night.png";
+    document.getElementById("contact-vector-phone").src="/images/phone-contact-night.png";
     return;
   } 
-    
-  icon.src = "/images/Vector.png";
+
+
+   document.body.classList.remove("dark-theme"); 
+   iconImg.style.backgroundImage = "url(/images/Toggle-day.png)";
+   icon.style.display = "flex";
+   iconImg.style.display = "flex";
+  document.getElementById("contact-vector-email").src="/images/mail-vector.png";
+  document.getElementById("contact-vector-phone").src="/images/phone-vector.png"
+
+    return;
 });
+
+//#endregion
+
+//#region click -- night toggle to Day-theme
+const iconNight = document.getElementById("icon-night");
+const iconImgNight= document.getElementById("icon-img-night");
+const iconDay = document.getElementById("icon");
+const iconImgDay = document.getElementById("icon-img");
+
+iconNight.addEventListener("click", () => {
+
+    document.body.classList.remove("dark-theme");
+    iconNight.style.display = "none";
+    iconImgNight.style.display= "none";
+    iconDay.style.display = "flex";
+    iconImgDay.style.display = "flex";
+    document.getElementById("contact-vector-email").src="/images/mail-vector.png";
+    document.getElementById("contact-vector-phone").src="/images/phone-vector.png";
+  
+    return;
+});
+
 //#endregion
 
 //#region Burguer Menu
@@ -64,6 +102,7 @@ menuObserver.observe(header);
 //#endregion
 
 //#region smooth scrolling //
+
 menuBar.addEventListener("click", function(elem) {
     elem.preventDefault();
     respMenu.classList.add("hidden-menu");
@@ -103,7 +142,7 @@ document.querySelector("#menu").addEventListener("mouseout", function(e) {
     const icon = link.closest("#menu").querySelector("#icon");
     brothers.forEach((brother) => {
       if (brother !== link) {
-        link.style.color = "var(--text-primary)";
+        link.style.color = "#FFFFFF";
       }
     });
   }
@@ -131,57 +170,6 @@ sections.forEach(function(section) {
   section.classList.add("section--hidden");
 });
 //#endregion
-
-//#region Projects section //
-
-/* The addEventListener(load) triggers the function when the page loads. This is the default behavior. */
-window.addEventListener("load", () => {
-  const slidesContainer = query(".slides");
-
-  // I created this variable to fetch the number of slides. Since querySelectorAll returns an array, here we can retrieve the number of slides. //
-  const slidesLength = queryAll(".slide").length;
-
-  // Buttons//
-
-  const prevButton = query(".slider-prev");
-  const nextButton = query(".slider-next");
-
-  // 'counter' is the numerical representation of the current slide. //
-  let slide = 1;
-
-  // Here, it's necessary to move the slide to the left so that the next one enters, hence the negative values below. //
-
-  // 1: 0
-  // 2: -100%
-  // 3: -200%
-
-  // * always takes precedence over + and -, so when you have addition or subtraction to be calculated before multiplication or division, the use of parentheses is required. For example: `${(slide - 1) * -100}%` //
-  // The name for these parentheses in mathematics is "precedence."
-
-  console.log("slidesLength", slidesLength);
-
-  nextButton.addEventListener("click", () => {
-    console.log(1);
-    if (slide === slidesLength) {
-      /* 'return' is to abort the function. */
-      slide = 0;
-      return;
-    }
-    slide++;
-    slidesContainer.style.left = `${(slide - 1) * -100}%`;
-  });
-
-  prevButton.addEventListener("click", () => {
-    console.log(2);
-    if (slide === 1) {
-      return;
-    }
-    slide--;
-    slidesContainer.style.left = `${(slide - 1) * -100}%`;
-  });
-});
-//#endregion
-/**/
 
 
 

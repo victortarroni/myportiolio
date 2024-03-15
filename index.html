@@ -8,18 +8,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Primary Meta Tags -->
     <title>Victor Tarroni - Web Developer Portfolio</title>
     <meta name="title" content="Victor Tarroni - Web Developer Portfolio" />
     <meta
       name="description"
       content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://victortarroni.com" />
-
     <meta
       property="og:title"
       content="Victor Tarroni - Web Developer Portfolio" />
@@ -27,7 +24,6 @@
       property="og:description"
       content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
     <meta property="og:image" content="https://i.imgur.com/8SE9eKn.png" />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://victortarroni.com" />
@@ -38,13 +34,9 @@
       property="twitter:description"
       content="Victor Tarroni's Portfolio showcasing knowledge in HTML, CSS, JavaScript, SQL, and C#. Includes three projects: Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS." />
     <meta property="twitter:image" content="https://i.imgur.com/8SE9eKn.png" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
-      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -63,36 +55,34 @@
   <body>
     <script>
       // This script is positioned at the root of the webpage to prevent any noticeable page flickering or flashing. By placing this script here, it ensures that this code is processed and rendered by the browser prior to the entire HTML page being fully displayed.  //
-
-      const theme = localStorage.getItem("theme");
-      if (theme) {
-        const action = theme === "dark" ? "add" : "remove";
-        document.body.classList[action]("dark");
-      } else if (
+      
+      if (
         matchMedia &&
         matchMedia("(prefers-color-scheme: dark)").matches
       ) {
         document.body.classList.add("dark-theme");
       }
+      
     </script>
-
     <!---------- Header ---------->
-
     <div id="header">
       <div id="menu" class="hidden-menu">
-        <a href="https://victortarroni.com"><h1>Victor Tarroni</h1></a>
+        <div id="logo-container">
+          <img id="victor-logo" src="/images/Vector 1 (Stroke).png" alt="Victor Tarroni's Portfolio Logo: Illustrating expertise in HTML, CSS, JavaScript, SQL, and C#. Featuring projects like Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS.">
+          <a href="https://victortarroni.com">
+            <h1>Victor Tarroni</h1>
+          </a>
+        </div>
         <ul class="menu-holder">
           <li id="btn-close" class="hidden-desktop list-mobile">&times;</li>
           <li><a href="#about-me" class="link">About Me</a></li>
           <li><a href="#mySkills" class="link">My Skills</a></li>
           <li><a href="#my-projects" class="link">Projects</a></li>
           <li><a href="#my-contact" class="link">Contacts</a></li>
-          <li><i class="fa-solid fa-sun" id="icon"></i></li>
-
+          <a id="contact-me" href="mailto:victortarroni@gmail.com">Contact-Me<i  id="cc-icon" class="fa-regular fa-paper-plane"></i></a>
           <li class="hidden-desktop list-mobile"></li>
         </ul>
       </div>
-
       <div id="mobile-menu">
         <h1>Victor Tarroni</h1>
         <svg
@@ -109,23 +99,27 @@
         </svg>
       </div>
     </div>
-
     <!-- Hero -->
-
     <div id="hero">
+      <!-- toggle day-->
+      <div id="icon">
+        <div id="icon-img"></div>
+      </div>
+      <!-- toggle night-->
+      <div id="icon-night">
+        <div id="icon-img-night"></div>
+      </div>
       <h1 id="content-header">
-        Hey, I'm <br /><span id="ownname">Victor Tarroni</span>
+        Hey, I'm <span id="ownname">Victor Tarroni</span>
       </h1>
-      <h2 id="sub-header">Web and Software developer</h2>
       <p class="sub-text">
-        Hey, I'm Victor Tarroni. I am a software engineer based in Macclesfield,
+        Hey, I'm Victor Tarroni. I am a web developer and a software engineer based in the
         UK.
       </p>
       <a href="Junior software Resume-01.pdf"
         download="Victor.Tarroni.curriculum.pdf" id="about-me-btn">Download
-        Resume</a>
+      Resume<i id="cv-icon" class="fa-regular fa-file"></i></a>
     </div>
-
     <!---------- About me ---------->
     <section id="about-me" class="scroll-offset">
       <div class="section">
@@ -136,14 +130,15 @@
             id="about-img" />
         </div>
         <div id="about-container">
-          <h2 id="about-me-title">About Me</h2>
+          <h2 id="about-me-title" class="sub-title" ><span class="sub-title-markup">About</span> Me</h2>
           <p id="about-me-text">
-            Hey, I'm Victor Tarroni.<br />
-            I am a software engineer based in Macclesfield, UK. <br />I've been
+            Hey, I'm Victor Tarroni.<br /><br />I've been
             professionally writing code with a focus in Web and Software
             development using HTML, CSS, JavaScript, SQL and C#. I'm naturally
             curious, and I'm always working on improving my skills through
-            freelance work and collaboration with talented people.
+            freelance work and collaboration with talented people.<br><br>
+            In addition to my technical expertise, I have valuable experience in customer experience and customer contact analysis from my past roles, enriching my skill set with a customer-focused approach.<br><br>
+            On a personal note, my love for working with people is a defining aspect of my personality. I thrive on collaboration and enjoy contributing to team dynamics. Outside the professional realm, I find joy in practicing sports, sharing meals, and embarking on adventures.
           </p>
         </div>
       </div>
@@ -152,7 +147,7 @@
     <section id="mySkills" class="scroll-offset">
       <div class="section">
         <div id="text-container">
-          <h2 class="sub-title">My Skills</h2>
+          <h2 id="My-Skill-Title" class="sub-title"><span class="sub-title-markup">My</span>  Skills</h2>
           <p class="sub-text">
             As a Web Developer, I possess skills that include HTML, CSS,
             JavaScript, SQL and C#, as well as soft skills such as communication
@@ -162,89 +157,87 @@
         <div id="my-skills-logo">
           <div>
             <img
-              src="/images/jp.logo/HTML Logo.png"
+              src="/images/Skill Icons day/HTML.png"
               alt="HTML icon representing proficiency in Hypertext Markup Language."
               id="html-logo"
               class="skill-logo" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/CSS Logo.png"
+              src="/images/Skill Icons day/CSS.png"
               alt="CSS icon representing proficiency in Cascading Style Sheets."
               id="css-logo"
               class="skill-logo" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/JS Logo.png"
+              src="/images/Skill Icons day/js.png"
               alt="JavaScript icon representing proficiency in the JavaScript programming language."
               id="js-logo"
               class="skill-logo" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/CsLogo.png"
+              src="/images/Skill Icons day/Csharp.png"
               alt="C# icon representing proficiency in the C# programming language."
               id="cs-logo"
               class="skill-logo" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/SQL Logo.png"
+              src="/images/Skill Icons day/SQL.png"
               alt="SQL icon representing proficiency in Structured Query Language for database management."
               id="sql-logo"
               class="skill-logo" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/GIT Logo.png"
+              src="/images/Skill Icons day/GitHub.png"
               alt="Git icon representing version control and collaboration using Git."
               id="git-logo"
               class="skill-logo" />
           </div>
         </div>
-
         <!-- -------- night mode -------------- -->
-
         <div id="my-skills-logo-dark">
           <div>
             <img
-              src="/images/jp.logo/HTML Logo.png"
+              src="/images/Skill Icons Night/HTML.png"
               alt="HTML icon representing proficiency in Hypertext Markup Language."
               id="html-logo"
               class="skill-logo-dark" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/CSS Logo.png"
+              src="/images/Skill Icons Night/CSS.png"
               alt="CSS icon representing proficiency in Cascading Style Sheets."
               id="css-logo"
               class="skill-logo-dark" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/JS Logo.png"
+              src="/images/Skill Icons Night/JS.png"
               alt="JavaScript icon representing proficiency in the JavaScript programming language."
               id="js-logo"
               class="skill-logo-dark" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/CsLogo.png"
+              src="/images/Skill Icons Night/Csharp.png"
               alt="C# icon representing proficiency in the C# programming language."
               id="cs-logo"
               class="skill-logo-dark" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/SQL Logo.png"
+              src="/images/Skill Icons Night/SQL.png"
               alt="SQL icon representing proficiency in Structured Query Language for database management."
               id="sql-logo"
               class="skill-logo-dark" />
           </div>
           <div>
             <img
-              src="/images/jp.logo/GIT Logo.png"
+              src="/images/Skill Icons Night/Github.png"
               alt="Git icon representing version control and collaboration using Git."
               id="git-logo"
               class="skill-logo-dark" />
@@ -255,107 +248,111 @@
     <!---------- Projects ---------->
     <section id="my-projects" class="scroll-offset">
       <div class="section">
-        <h2 id="my-projects-title">My projects</h2>
-        <div id="slider">
-          <div class="slides-wrapper">
-            <ul class="slides">
-              <li class="slide">
-                <a
-                  href="https://github.com/victortarroni/bankist"
-                  target="_blank">
-                  <img
-                    src="/images/Bankist.project.png"
-                    alt="Screenshot of the Bankist website - a fictional online banking platform." />
-                </a>
-              </li>
-              <li class="slide">
-                <a
-                  href="https://github.com/victortarroni/PigGame"
-                  target="_blank">
-                  <img
-                    src="/images/Pig-game.project.png"
-                    alt="Screenshot of the Pig Game project - a fun dice game developed using HTML, CSS, and JavaScript." />
-                </a>
-              </li>
-              <li class="slide">
-                <a
-                  href="https://github.com/victortarroni/guess-my-number"
-                  target="_blank">
-                  <img
-                    src="/images/guess-my-number.png"
-                    alt="Screenshot of the Guess My Number project - a number guessing game developed with HTML, CSS, and JavaScript." />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a class="control slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
-          <a class="control slider-next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-          <div class="slider-dots"></div>
+        <h2 id="my-projects-title" class="sub-title"><span id="my-projects-span">My</span> projects</h2>
+        <div id="wrapping-text-container">
+          <p id="container-project-text" class="sub-text">Explore this section to discover a diverse range of projects, each designed to address unique challenges and demonstrate the depth of my technical proficiency.
         </div>
+        <div id="wrapping-projects">
+          <div id="project1" class="project-container">
+            <div id="project1-img" class="project-img"></div>
+            <div class="project-text">
+              <h3 class="project-txt-title">Bankist</h3>
+              <div    class="txt-projects">Explore the future of banking with Bankist! This project, powered by HTML, CSS, and JavaScript, showcases a cutting-edge bank website with a responsive design, ensuring a seamless and dynamic user experience for all your financial interactions.</div>
+              <a class="project-button" href="https://github.com/victortarroni/bankist" target="_blank">check this project</a>
+            </div>
+          </div>
+          <div id="project2" class="project-container">
+            <div id="project2-img" class="project-img"></div>
+            <div class="project-text">
+              <h3 class="project-txt-title" >Pig Game</h3>
+              <div class="txt-projects">Dive into endless fun with the Pig Game! Crafted using HTML, CSS, and Javascript, this interactive project brings a classic dice game to life. Enjoy the thrill of strategy and chance in a visually appealing and user-friendly design.</div>
+              <a class="project-button" href="https://github.com/victortarroni/PigGame" target="_blank">check this project</a>
+            </div>
+          </div>
+          <div id="project3" class="project-container">
+            <div id="project3-img" class="project-img"></div>
+            <div class="project-text">
+              <h3 class="project-txt-title">Guess my Number</h3>
+              <div class="txt-projects">Embark on a number-guessing adventure with this interactive project! Developed using HTML, CSS, and Javascript, this engaging game challenges your intuition. Experience sleek design and seamless gameplay as you attempt to crack the code and conquer the Guess My Number challenge!</div>
+              <a class="project-button" href="https://github.com/victortarroni/guess-my-number" target="_blank">check this project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </section>
     <!---------- Contact ---------->
     <section id="my-contact" class="scroll-offset">
       <div class="section">
-        <div id="contact-1">
-          <h2 class="sub-title">Contact</h2>
-          <p class="sub-text" id="contact-text">
-            Thank you for reviewing my qualifications.<br />
-            I look forward to sharing more about my skills and experiences.<br />
-            Please feel free to contact me at<span class="contact-bold">
-              0753825-1953</span>, through my email address:
-            <span class="contact-bold">victortarroni@gmail.com</span> or through
-            my social media channels attached to the website.
+        <!-- mini-menu start -->
+        <div id="header-footer">
+          <div id="menu-footer">
+            <div id="logo-container-footer">
+              <img id="victor-logo" src="/images/Vector 1 (Stroke).png" alt="Victor Tarroni's Portfolio Logo: Illustrating expertise in HTML, CSS, JavaScript, SQL, and C#. Featuring projects like Fictional Bank Website, Pig Game, and Guess My Number Game using HTML, CSS, and JS.">
+              <a href="https://victortarroni.com">
+                <h1 id="contact-logo-name">Victor Tarroni</h1>
+              </a>
+            </div>
+            <ul class="menu-holder-footer">
+              <li><a href="#about-me" class="link-footer">About Me</a></li>
+              <li><a href="#mySkills" class="link-footer">My Skills</a></li>
+              <li><a href="#my-projects" class="link-footer" id="project-contact">Projects</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end of mini menu -->
+        <div id="wrap-contact">
+          <div id="contact-1">
+            <p id="contact-text">
+              If you are in search of a dedicated and skilled junior software engineer, please feel free to reach out to me
+              <br><br>
+              <img id="contact-vector-phone" src="/images/phone-vector.png" alt="victor's phone" class="contact-icon"> 07538251953
+              <br>
+              <img id="contact-vector-email" src="/images/mail-vector.png" alt="victor's email" class="contact-icon">victortarroni@gmail.com
+            </p>
+          </div>
+          <div id="contact-logo" class="section">
+            <a href="https://github.com/victortarroni" target="_blank"><img
+              src="/images/github-contact-day.png"
+              alt="GitHub image linking to Victor Tarroni's GitHub profile"
+              id="github" /></a>
+            <a
+              href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
+              target="_blank"><img
+              src="/images/linkedin-contact-day.png"
+              alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
+              id="linkedin" /></a>
+          </div>
+       </div>
+      <!-- ---------contact night mode ----------------- -->
+      <div id="wrap-contact-night">
+        <div id="contact-1-dark">
+          <p id="contact-text-dark">
+            If you are in search of a dedicated and skilled junior software engineer, please feel free to reach out to me
+            <br><br>
+            <img id="contact-vector-phone" src="/images/Phone.night.Mode.png" alt="victor's phone" class="contact-icon-dark"> 07538251953
+            <br>
+            <img id="contact-vector-email" src="/images/Mail.nightMode.png" alt="victor's email" class="contact-icon-dark">victortarroni@gmail.com
           </p>
         </div>
-        <div id="contact-logo">
-          <a href="https://github.com/victortarroni" target="_blank"><img
-              src="/images/github.png"
-              alt="GitHub image linking to Victor Tarroni's GitHub profile"
-              id="github" /></a>
-
-          <a
-            href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
-            target="_blank"><img
-              src="/images/linkedin.png"
-              alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
-              id="linkedin" /></a>
-          <a
-            href="https://www.google.com/maps/@53.2565328,-2.1297842,15.87z?entry=ttu"
-            target="_blank">
-            <img
-              src="/images/maps.png"
-              alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
-              id="googlemaps" />
-          </a>
-        </div>
-
-        <!-- ---------contact night mode ----------------- -->
-
         <div id="contact-logo-dark" class="section">
           <a href="https://github.com/victortarroni" target="_blank"><img
-              src="/images/github.dark.png"
-              alt="GitHub image linking to Victor Tarroni's GitHub profile"
-              id="github" /></a>
+            src="/images/github-contact-night.png"
+            alt="GitHub image linking to Victor Tarroni's GitHub profile"
+            id="github-night" /></a>
           <a
             href="https://www.linkedin.com/in/victor-tarroni-6556b511/"
             target="_blank"><img
-              src="/images/linkedin.dark.png"
-              alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
-              id="linkedin" /></a>
-          <a
-            href="https://www.google.com/maps/@53.2565328,-2.1297842,15.87z?entry=ttu"
-            target="_blank">
-            <img
-              src="/images/maps.dark.png"
-              alt="Google Maps icon linking to Victor Tarroni's location on Google Maps"
-              id="googlemaps" />
-          </a>
+            src="/images/linkedin-contact-night.png"
+            alt="LinkedIn icon linking to Victor Tarroni's LinkedIn profile"
+            id="linkedin-night" /></a>
         </div>
       </div>
-    </section>
-    <footer class="section">Website Developed by Victor Tarroni</footer>
+    </div>
+  </section>
+    <footer class="section">&copy 2024 Website developed by Victor Tarroni. Designed by Thyara Barisevicius. All rights reserved.</footer>
   </body>
 </html>
