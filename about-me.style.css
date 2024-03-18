@@ -28,7 +28,7 @@
   text-align: justify;
 }
 
-#about-me-title{
+#about-me-title {
   color: var(--fourth-color-);
 }
 
@@ -62,7 +62,6 @@
 
   #about-me-title {
       color: white;
-      font-weight: 500;
       font-size: 30px;
   }
 

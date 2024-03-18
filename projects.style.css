@@ -13,76 +13,70 @@
 #my-projects-title {
   color: white;
   margin-left: 160px;
-  
 }
 
-#my-projects-span{
+#my-projects-span {
   color: var(--third-color-);
 }
 
-#wrapping-text-container{
+#wrapping-text-container {
   max-width: 1090px;
 }
 
 #container-project-text {
   width: 50%;
   margin-left: 14%;
-  
 }
 
-.project-txt-title{
+.project-txt-title {
   font-size: 23px;
   font-weight: bold;
 }
 
-.txt-projects{
+.txt-projects {
   max-width: 80%;
   font-size: 19px;
   margin-bottom: 39px;
-   
 }
 
-
-.project-container{
+.project-container {
   height: 20%;
   margin-top: 75px;
   margin-bottom: 75px;
 }
 
-.project-img{
-  width: 50%;
-  height: 100%;
-  
-}
-
-.project-text{
+.project-img {
   width: 50%;
   height: 100%;
 }
 
-#project1{
+.project-text {
+  width: 50%;
+  height: 100%;
+}
+
+#project1 {
   display: flex;
 }
 
-#project2{
+#project2 {
   display: flex;
   flex-direction: row-reverse;
 }
 
-#project3{
+#project3 {
   display: flex;
 }
 
-#project1-img{
+#project1-img {
   height: 302px;
   width: 538px;
   background: url(/images/Myprojects/Bankist-project.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  
 }
-#project2-img{
+#project2-img {
   height: 302px;
   width: 538px;
   background: url(/images/Myprojects/pigGame.png);
@@ -90,7 +84,7 @@
   background-size: contain;
   background-position: center;
 }
-#project3-img{
+#project3-img {
   height: 302px;
   width: 538px;
   background: url(/images/Myprojects/GMN.png);
@@ -112,119 +106,112 @@
   border-radius: 6px;
 }
 
-
 /* Mobile */
 
-@media screen and (max-width: 430px){
-#my-projects .section {
-width: 100%;
-/* height: 2284px; */
-background-color: var(--secondary-color);
-}
-
-#my-projects{
-position: relative;
-width: auto;
-background-color: var(--secondary-color);
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-#my-projects-title {
-color: white;
-font-weight: 500;
-font-size: 30px;
-margin-bottom: 40px;
-margin-left: 20px;
-}
-
-#project1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#project2{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#project3{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-img{
-  width: 100%;
-  height: 50%;
+@media screen and (max-width: 430px) {
+  #my-projects .section {
+      width: 100%;
+      background-color: var(--secondary-color);
   }
 
-  #wrapping-text-container{
-    max-width: 100%;
-    margin: 0px;
-    padding: 0px 10px 0px 10px;
+  #my-projects {
+      position: relative;
+      width: auto;
+      background-color: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #my-projects-title {
+      color: white;
+      font-size: 30px;
+      margin-bottom: 40px;
+      margin-left: 20px;
+  }
+
+  #project1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #project2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #project3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .project-img {
+      width: 100%;
+      height: 50%;
+  }
+
+  #wrapping-text-container {
+      max-width: 100%;
+      margin: 0px;
+      padding: 0px 10px 0px 10px;
   }
 
   #container-project-text {
-    width: 100%;
-    margin: 0px;
-    
+      width: 100%;
+      margin: 0px;
   }
 
-  .project-text{
-    width: 90%;
-    height: 50%;
-    text-align: justify;
+  .project-text {
+      width: 90%;
+      height: 50%;
+      text-align: justify;
   }
 
-  .txt-projects{
-    max-width: 100%;
-    font-size: 19px;
-    margin-bottom: 20px;
-     
+  .txt-projects {
+      max-width: 100%;
+      font-size: 19px;
+      margin-bottom: 20px;
   }
 
   #wrapping-projects {
-    width: auto;
-    margin: 0px 0px 0px;
+      width: auto;
+      margin: 0px 0px 0px;
   }
 
-  .project-container{
-    height: 45%;
-    margin-top: 70px;
-    margin-bottom: 15px;
+  .project-container {
+      height: 45%;
+      margin-top: 70px;
+      margin-bottom: 15px;
   }
 
-  #project1-img{
-    height: 225px;
-    width: 90%;
-    background: url(/images/Myprojects/Bankist-project.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    
+  #project1-img {
+      height: 225px;
+      width: 90%;
+      background: url(/images/Myprojects/Bankist-project.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
   }
-  #project2-img{
-    height: 225px;
-    width: 90%;
-    background: url(/images/Myprojects/pigGame.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  #project2-img {
+      height: 225px;
+      width: 90%;
+      background: url(/images/Myprojects/pigGame.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
   }
-  #project3-img{
-    height: 225px;
-    width: 90%;
-    background: url(/images/Myprojects/GMN.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  #project3-img {
+      height: 225px;
+      width: 90%;
+      background: url(/images/Myprojects/GMN.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
   }
-
 }

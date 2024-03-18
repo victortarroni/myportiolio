@@ -26,8 +26,6 @@
   font-size: 24px;
   font-weight: 500;
   white-space: nowrap;
-  
-  
 }
 
 #mobile-menu {
@@ -60,9 +58,9 @@
   padding: 0 108px;
   background: var(--primary-color);
   /* background-image: var(--main-header);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center; */
 }
 
 #ownname {
@@ -96,15 +94,15 @@
   margin-right: 10px;
 }
 
-#logo-container{
-  height:auto;
+#logo-container {
+  height: auto;
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#contact-me{
+#contact-me {
   height: 47px;
   width: 186px;
   display: flex;
@@ -114,15 +112,14 @@
   background: #00D1C7;
   border-radius: 6px;
   font-weight: 500;
-
 }
 
-#cc-icon{
+#cc-icon {
   margin-left: 5px;
-  
 }
 
-#icon, #icon-night {
+#icon,
+#icon-night {
   position: absolute;
   top: 140px;
   right: 0;
@@ -131,13 +128,16 @@
   width: 60px;
   background: var(--text-primary);
   border-radius: 6px 0px 0px 6px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #icon-night{
-    display: none;
-  }
+#icon-night {
+  display: none;
+}
 
-#icon-img{
+#icon-img {
   height: 60%;
   width: 60%;
   background-image: url(/images/Toggle-day.png);
@@ -147,7 +147,7 @@
   margin: auto;
 }
 
-#icon-img-night{
+#icon-img-night {
   height: 60%;
   width: 60%;
   background-image: url(/images/Toggle-night.png);
@@ -157,14 +157,13 @@
   margin: auto;
 }
 
-#cv-icon{
+#cv-icon {
   margin-left: 5px;
 }
 
 /* Mobile Version */
 
 @media screen and (max-width: 768px) {
-
   #menu {
       height: 125px;
       margin-bottom: 134px;
@@ -211,20 +210,19 @@
       left: 0;
       right: 0;
       bottom: 0;
-/* Alternatively, here could be used instead of 'top', 'left', 'right', 'bottom'. Utilizing 'width: 100vw' and 'height: 100vh' provides an alternative approach or I could use inset:0 */
+      /* Alternatively, here could be used instead of 'top', 'left', 'right', 'bottom'. Utilizing 'width: 100vw' and 'height: 100vh' provides an alternative approach or I could use inset:0 */
       background-color: var(--primary-color);
   }
 
   .list-mobile {
       display: list-item;
       flex-grow: 1;
-/* This class is applied to both the first and second 'li' elements. 'flex-grow: 1' is employed to expand and center the remaining 'li' items within the menu */
+      /* This class is applied to both the first and second 'li' elements. 'flex-grow: 1' is employed to expand and center the remaining 'li' items within the menu */
       font-size: 30px;
       padding-right: 21px !important;
   }
 
   #menu li {
-    
       margin: 0 !important;
       padding: 25px 0;
   }
@@ -235,7 +233,7 @@
 
   #header-content {
       height: 100vh;
-/* Specifying in 'vh' considers the size of the display the website is viewed on. On the contrary, '100%' may exhibit somewhat unpredictable behavior. Delve deeper into the differences for a better understanding */
+      /* Specifying in 'vh' considers the size of the display the website is viewed on. On the contrary, '100%' may exhibit somewhat unpredictable behavior. Delve deeper into the differences for a better understanding */
       padding: 0 35px;
   }
 
@@ -263,6 +261,6 @@
   }
 
   .link {
-    color: var(--text-primary);
+      color: var(--text-primary);
   }
 }

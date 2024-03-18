@@ -8,11 +8,12 @@
   margin: auto;
 }
 
-#contact-logo-name{
+#contact-logo-name {
   white-space: nowrap;
 }
 
-#contact-1, #contact-1-dark {
+#contact-1,
+#contact-1-dark {
   width: 50%;
   height: 100%;
   display: flex;
@@ -23,21 +24,22 @@
   margin-top: 45px;
 }
 
-#contact-1-dark{
+#contact-1-dark {
   display: none;
 }
 
-#contact-text, #contact-text-dark {
+#contact-text,
+#contact-text-dark {
   font-weight: 300;
   width: 410px;
 }
 
-#contact-text-dark{
+#contact-text-dark {
   display: none;
 }
 
-
-#contact-logo,  #contact-logo-dark {
+#contact-logo,
+#contact-logo-dark {
   width: 50%;
   height: 100%;
   display: flex;
@@ -46,33 +48,39 @@
   padding: 0 80px;
 }
 
-#contact-logo a,  #contact-logo-dark a {
+#contact-logo a,
+#contact-logo-dark a {
   display: flex;
   align-items: center;
 }
 
-#github, #linkedin, #github-night, #linkedin-night {
+#github,
+#linkedin,
+#github-night,
+#linkedin-night {
   width: 45px;
   height: 45px;
   margin-right: 15px;
 }
 
-#linkedin-night, #github-night {
+#linkedin-night,
+#github-night {
   display: none;
 }
 
-#contact-logo a img, #contact-logo-dark a img, #github-night, #linkedin-night  {
+#contact-logo a img,
+#contact-logo-dark a img,
+#github-night,
+#linkedin-night {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-
 #header-footer {
   height: 58px;
   width: 100%;
 }
-
 
 #menu-footer {
   font-weight: bold;
@@ -82,36 +90,32 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 35px;
-  
 }
 
-.menu-holder-footer{
+.menu-holder-footer {
   display: flex;
   gap: 48px;
 }
 
-.link-footer{
+.link-footer {
   font-size: 16px;
   font-weight: 500;
   color: var(--text-primary);
 }
 
-
-
-.contact-icon, .contact-icon-dark {
+.contact-icon,
+.contact-icon-dark {
   height: 24px;
   width: 24px;
   margin-right: 5px;
 }
 
-
-
-#project-contact{
+#project-contact {
   margin-right: 150px;
 }
 
-#logo-container-footer{
-  height:auto;
+#logo-container-footer {
+  height: auto;
   width: 20%;
   display: flex;
   justify-content: center;
@@ -119,44 +123,35 @@
   padding-left: 70px;
 }
 
-#wrap-contact, #wrap-contact-night {
+#wrap-contact,
+#wrap-contact-night {
   display: flex;
 }
-
-
 
 /* Mobile Version */
 
 @media screen and (max-width: 768px) {
-
-#wrap-contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-}
-
-
-#wrap-contact-night {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-
-
-  #my-contact .section {
-      width: 50%;
-      background-color: var(--primary-color);
+  #wrap-contact {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       align-items: center;
   }
 
+  #header-footer {
+      padding-left: 50px;
+  }
+
+  #wrap-contact-night {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+  }
+
   #contact-1 {
-    width: 50%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -165,45 +160,32 @@
   }
 
   /* contact-1 precisa de padding-left: 0px; para centralizar */
-  
+
   #contact-1-dark {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  
   }
 
-   /* contact-1 herda o padding-left para centralizar */
+  /* contact-1 herda o padding-left para centralizar */
 
-  #contact-text, #contact-text-dark {
-    font-weight: 300;
-    width: 270px;
+  #contact-text,
+  #contact-text-dark {
+      font-weight: 300;
+      width: 270px;
   }
 
-  #contact-logo,  #contact-logo-dark {
+  #contact-logo,
+  #contact-logo-dark {
       margin: auto;
       width: 100%;
   }
 
   #contact-logo-dark {
-    display: none;
+      display: none;
   }
-
-  /* #github {
-      width: 49.6px;
-      height: 49.6px;
-      margin-left: 84px;
-      margin-right: 0px;
-  }
-
-  #linkedin {
-      width: 44.83px;
-      height: 44.35px;
-      margin-right: 0px;
-      padding-left: 0px;
-  } */
 
   #googlemaps {
       width: 27.66px;
@@ -211,9 +193,14 @@
       margin-right: 83.79px;
   }
 
-  .menu-holder-footer{
-    display: none;
-    
+  .menu-holder-footer {
+      display: none;
   }
 
+  #contact-logo a,
+  #contact-logo-dark a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 }
