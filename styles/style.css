@@ -16,8 +16,6 @@ body {
   background-position: center;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 }
 
 .section {
@@ -56,6 +54,7 @@ a {
 #icon:hover {
   color: #00D1C7;
 }
+
 h1,
 h2 {
   line-height: 1.2;

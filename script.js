@@ -154,15 +154,17 @@ const sections = queryAll(".section");
 
 const reavealingSect = function(entries, observer) {
   const [entry] = entries;
+  console.log("entry: ", entry);
+  console.log("entry.isIntersecting: ", entry.isIntersecting);
   if (!entry.isIntersecting) return;
-
+  console.log(entries);
   entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target);
 };
 
 const sectionOberver = new IntersectionObserver(reavealingSect, {
   root: null,
-  threshold: 0.4,
+  threshold: 0.1,
 });
 
 sections.forEach(function(section) {
