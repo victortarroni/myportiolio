@@ -154,8 +154,6 @@ const sections = queryAll(".section");
 
 const reavealingSect = function(entries, observer) {
   const [entry] = entries;
-  console.log("entry: ", entry);
-  console.log("entry.isIntersecting: ", entry.isIntersecting);
   if (!entry.isIntersecting) return;
   console.log(entries);
   entry.target.classList.remove("section--hidden");
